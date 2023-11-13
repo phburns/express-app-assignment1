@@ -2,13 +2,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profile</title>
+  <%- include ./partials/header %>
 </head>
 <body>
-  <%= include('./navbar.ejs') %>
-  <h1>Profile</h1>
-  <!-- Display fake data for the logged-in user -->
+  <%- include ./partials/navbar %>
+  <div class="container">
+    <h1>Profile</h1>
+    <div class="profile-info">
+      <h3>Welcome, <%= user.name %></h3>
+      <p>Email: <%= user.email %></p>
+      <p>Username: <%= user.username %></p>
+      <p>Phone: <%= user.phone %></p>
+      <p>Website: <%= user.website %></p>
+    </div>
+  </div>
+  <%- include ./partials/scripts %>
 </body>
 </html>
